@@ -1,0 +1,12 @@
+Copyright © 2026 OtherClap
+Todos los derechos reservados.
+
+No se concede permiso para vender, sublicenciar, distribuir a cambio de pago
+ni explotar comercialmente SkinCheck sin autorización previa por escrito de
+OtherClap.
+
+El código fuente se entrega para inspección y modificación personal. La
+modificación del código no concede permiso para comercializar el programa.
+
+Los enlaces, el favicon de mtarp.es y los logotipos conservan los derechos de
+sus respectivos titulares. El favicon se incluyó por solicitud del usuario.
