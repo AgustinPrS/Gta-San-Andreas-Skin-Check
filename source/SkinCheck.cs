@@ -97,6 +97,7 @@ namespace SkinCheck
             "filter_signature", "Firma Authenticode",
             "filter_injection", "Inyección y memoria",
             "add", "Agregar archivos...",
+            "add_folder", "Seleccionar carpeta...",
             "remove", "Quitar",
             "clear", "Vaciar lista",
             "analyze", "Analizar lista",
@@ -106,10 +107,12 @@ namespace SkinCheck
             "column_path", "Ubicación",
             "column_result", "Resultado",
             "pending", "Pendiente",
-            "intro", "Arrastrá archivos a la lista o elegilos con “Agregar archivos...”.\r\n\r\nSkinCheck solo lee los archivos: no los abre en el juego, no los ejecuta y no los sube a internet.\r\nUna alerta es un indicio para revisar, no una confirmación de infección.",
+            "intro", "Arrastrá archivos a la lista, elegilos con “Agregar archivos...” o seleccioná una carpeta con “Seleccionar carpeta...”.\r\n\r\nSkinCheck solo lee los archivos: no los abre en el juego, no los ejecuta y no los sube a internet.\r\nUna alerta es un indicio para revisar, no una confirmación de infección.",
             "status_ready", "Listo. El análisis se realiza en esta PC.",
             "status_no_added", "No se agregaron archivos nuevos.",
             "status_added", "Agregados: {0}. No se ejecutó ningún archivo.",
+            "folder_empty", "No se encontraron archivos .dff ni .txd en la carpeta.",
+            "folder_error", "No se pudo leer la carpeta seleccionada: {0}",
             "status_removed", "Se quitó el archivo seleccionado de la lista.",
             "status_empty", "Lista vacía.",
             "status_analyzing", "Analizando archivos localmente...",
@@ -123,6 +126,7 @@ namespace SkinCheck
             "message_open_error", "No se pudo abrir el enlace: {0}",
             "info_title", "SkinCheck",
             "dialog_open_title", "Elegí skins, programas u otros archivos",
+            "dialog_folder_title", "Elegí una carpeta para buscar archivos DFF/TXD",
             "dialog_all_files", "Todos los archivos (*.*)|*.*",
             "dialog_save_title", "Guardar informe de SkinCheck",
             "dialog_save_filter", "Informe de texto (*.txt)|*.txt",
@@ -199,6 +203,7 @@ namespace SkinCheck
             "filter_signature", "Authenticode signature",
             "filter_injection", "Memory and process injection",
             "add", "Add files...",
+            "add_folder", "Select folder...",
             "remove", "Remove",
             "clear", "Clear list",
             "analyze", "Analyze list",
@@ -208,10 +213,12 @@ namespace SkinCheck
             "column_path", "Location",
             "column_result", "Result",
             "pending", "Pending",
-            "intro", "Drag files into the list or choose them with “Add files...”.\r\n\r\nSkinCheck only reads files: it does not open them in a game, execute them, or upload them.\r\nAn alert is an indicator to review, not confirmation of infection.",
+            "intro", "Drag files into the list, choose them with “Add files...”, or select a folder with “Select folder...”.\r\n\r\nSkinCheck only reads files: it does not open them in a game, execute them, or upload them.\r\nAn alert is an indicator to review, not confirmation of infection.",
             "status_ready", "Ready. Analysis runs on this PC.",
             "status_no_added", "No new files were added.",
             "status_added", "Added: {0}. No file was executed.",
+            "folder_empty", "No .dff or .txd files were found in the folder.",
+            "folder_error", "Could not read the selected folder: {0}",
             "status_removed", "The selected file was removed from the list.",
             "status_empty", "List cleared.",
             "status_analyzing", "Analyzing files locally...",
@@ -225,6 +232,7 @@ namespace SkinCheck
             "message_open_error", "Could not open the link: {0}",
             "info_title", "SkinCheck",
             "dialog_open_title", "Choose skins, programs, or other files",
+            "dialog_folder_title", "Choose a folder to search for DFF/TXD files",
             "dialog_all_files", "All files (*.*)|*.*",
             "dialog_save_title", "Save SkinCheck report",
             "dialog_save_filter", "Text report (*.txt)|*.txt",
@@ -301,6 +309,7 @@ namespace SkinCheck
             "filter_signature", "Assinatura Authenticode",
             "filter_injection", "Injeção e memória",
             "add", "Adicionar arquivos...",
+            "add_folder", "Selecionar pasta...",
             "remove", "Remover",
             "clear", "Limpar lista",
             "analyze", "Analisar lista",
@@ -310,10 +319,12 @@ namespace SkinCheck
             "column_path", "Localização",
             "column_result", "Resultado",
             "pending", "Pendente",
-            "intro", "Arraste arquivos para a lista ou escolha-os em “Adicionar arquivos...”.\r\n\r\nO SkinCheck apenas lê os arquivos: não os abre em um jogo, não os executa e não os envia.\r\nUm alerta é um indício para revisão, não uma confirmação de infecção.",
+            "intro", "Arraste arquivos para a lista, escolha-os em “Adicionar arquivos...” ou selecione uma pasta com “Selecionar pasta...”.\r\n\r\nO SkinCheck apenas lê os arquivos: não os abre em um jogo, não os executa e não os envia.\r\nUm alerta é um indício para revisão, não uma confirmação de infecção.",
             "status_ready", "Pronto. A análise é feita neste computador.",
             "status_no_added", "Nenhum arquivo novo foi adicionado.",
             "status_added", "Adicionados: {0}. Nenhum arquivo foi executado.",
+            "folder_empty", "Nenhum arquivo .dff ou .txd encontrado na pasta.",
+            "folder_error", "Não foi possível ler a pasta selecionada: {0}",
             "status_removed", "O arquivo selecionado foi removido da lista.",
             "status_empty", "Lista limpa.",
             "status_analyzing", "Analisando arquivos localmente...",
@@ -327,6 +338,7 @@ namespace SkinCheck
             "message_open_error", "Não foi possível abrir o link: {0}",
             "info_title", "SkinCheck",
             "dialog_open_title", "Escolha skins, programas ou outros arquivos",
+            "dialog_folder_title", "Escolha uma pasta para buscar arquivos DFF/TXD",
             "dialog_all_files", "Todos os arquivos (*.*)|*.*",
             "dialog_save_title", "Salvar relatório do SkinCheck",
             "dialog_save_filter", "Relatório de texto (*.txt)|*.txt",
@@ -432,6 +444,7 @@ namespace SkinCheck
         private readonly Button _analyzeButton = new Button();
         private readonly Button _vtButton = new Button();
         private readonly Button _addButton = new Button();
+        private readonly Button _addFolderButton = new Button();
         private readonly Button _removeButton = new Button();
         private readonly Button _clearButton = new Button();
         private readonly Button _saveButton = new Button();
@@ -560,12 +573,15 @@ namespace SkinCheck
             actions.FlowDirection = FlowDirection.LeftToRight;
             actions.Padding = new Padding(0, 3, 0, 0);
             _addButton.Click += AddFiles;
+            _addFolderButton.Click += AddFolder;
             _removeButton.Click += RemoveSelected;
             _clearButton.Click += ClearFiles;
             _analyzeButton.Click += AnalyzeFiles;
             _vtButton.Click += SearchVirusTotal;
             _saveButton.Click += SaveReport;
             StyleButton(_addButton, false);
+            StyleButton(_addFolderButton, false);
+            _addFolderButton.MinimumSize = new Size(150, 35);
             StyleButton(_removeButton, false);
             StyleButton(_clearButton, false);
             StyleButton(_analyzeButton, true);
@@ -573,6 +589,7 @@ namespace SkinCheck
             StyleButton(_saveButton, false);
             _vtButton.Enabled = false;
             actions.Controls.Add(_addButton);
+            actions.Controls.Add(_addFolderButton);
             actions.Controls.Add(_removeButton);
             actions.Controls.Add(_clearButton);
             actions.Controls.Add(_analyzeButton);
@@ -705,6 +722,7 @@ namespace SkinCheck
             _signatureFilter.Text = LanguageCatalog.T(_language, "filter_signature");
             _injectionFilter.Text = LanguageCatalog.T(_language, "filter_injection");
             _addButton.Text = LanguageCatalog.T(_language, "add");
+            _addFolderButton.Text = LanguageCatalog.T(_language, "add_folder");
             _removeButton.Text = LanguageCatalog.T(_language, "remove");
             _clearButton.Text = LanguageCatalog.T(_language, "clear");
             _analyzeButton.Text = LanguageCatalog.T(_language, "analyze");
@@ -766,6 +784,45 @@ namespace SkinCheck
                 dialog.Multiselect = true;
                 if (dialog.ShowDialog(this) == DialogResult.OK)
                     AddPaths(dialog.FileNames);
+            }
+        }
+
+        private void AddFolder(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+            {
+                dialog.Description = LanguageCatalog.T(_language, "dialog_folder_title");
+                dialog.ShowNewFolderButton = false;
+                if (dialog.ShowDialog(this) != DialogResult.OK)
+                    return;
+
+                try
+                {
+                    string[] files = Directory.GetFiles(dialog.SelectedPath, "*", SearchOption.AllDirectories);
+                    List<string> renderWareFiles = new List<string>();
+                    for (int i = 0; i < files.Length; i++)
+                    {
+                        string extension = Path.GetExtension(files[i]);
+                        if (String.Equals(extension, ".dff", StringComparison.OrdinalIgnoreCase) ||
+                            String.Equals(extension, ".txd", StringComparison.OrdinalIgnoreCase))
+                            renderWareFiles.Add(files[i]);
+                    }
+
+                    if (renderWareFiles.Count == 0)
+                    {
+                        _status.Text = LanguageCatalog.T(_language, "folder_empty");
+                        return;
+                    }
+
+                    AddPaths(renderWareFiles.ToArray());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this,
+                        LanguageCatalog.T(_language, "folder_error", ex.Message),
+                        LanguageCatalog.T(_language, "info_title"),
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 

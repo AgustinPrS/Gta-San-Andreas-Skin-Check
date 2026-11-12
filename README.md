@@ -8,7 +8,7 @@ Analizador estático para revisar skins de GTA San Andreas, archivos .exe y otro
 
 1. Descarga SkinCheck.exe.
 2. Abre el programa.
-3. Arrastra uno o varios archivos a la ventana, o pulsa **Agregar archivos**.
+3. Arrastra uno o varios archivos a la ventana, pulsa **Agregar archivos** o usa **Seleccionar carpeta** para importar solo archivos `.dff` y `.txd` de la carpeta y sus subcarpetas.
 4. Deja marcados los filtros que quieras usar y pulsa **Analizar lista**.
 5. Selecciona un archivo para ver los indicadores encontrados y su hash SHA-256.
 
